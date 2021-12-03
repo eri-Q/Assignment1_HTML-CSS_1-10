@@ -5,6 +5,7 @@
 }
 
 header {
+  width: 100%;
   height: 50px;
   background-color: #ff9a4b;
 }
@@ -15,7 +16,7 @@ main {
   margin: 50px auto;
 }
 
-main section {
+.box {
   width: 300px;
   background-color: #eee;
   margin-right: 30px;
@@ -23,11 +24,11 @@ main section {
   position: relative;
 }
 
-main section:last-child {
+.box:last-child {
   margin-right: 0;
 }
 
-main section span {
+.step-num {
   position: absolute;
   top: 0;
   left: 0;
@@ -61,11 +62,29 @@ main section span {
 }
 
 .text {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 footer {
   width: 100%;
   height: 50px;
   background-color: #aaa;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    display: block;
+  }
+
+  .box {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .box:last-child {
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
 }
